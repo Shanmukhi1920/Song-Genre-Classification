@@ -39,6 +39,16 @@ In Jupyter, open the `Song_Genre_Classification.ipynb` notebook.
 ## Notebook Overview
 `Song_Genre_Classification.ipynb`: Contains the full analysis, from data loading, analysis and preprocessing to model building and evaluation.
 
+## Saved Model
+The best-performing model is saved using joblib(song_classifier.joblib). This model can be loaded for future predictions or further analysis.
+
+To load the model:
+
+```python
+import joblib
+model = joblib.load('song_classifier.joblib')
+```
+
 ## Results
 **Performance Consistency:** Logistic Regression and SVM demonstrated consistent performance across cross-validation and test sets.
 
