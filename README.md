@@ -17,21 +17,13 @@ The analysis is based on two datasets:
   - Decision Tree (DT)
   - Random Forest (RF)
 
-## Requirements
-- Python 3.x
-- Libraries:
-  - pandas
-  - NumPy
-  - Matplotlib
-  - seaborn
-  - scikit-learn
-  - joblib
 
 ## Installation and Usage
-To set up the project, clone the repository and navigate to the directory. Run Jupyter Notebook to view the project:
+To set up the project, clone the repository, install dependencies, and navigate to the directory. Run Jupyter Notebook to view the project:
 ```bash
 git clone https://github.com/Shanmukhi1920/Song_Genre_Classification
 cd Song_Genre_Classification
+pip install -r requirements.txt
 jupyter notebook
 ```
 In Jupyter, open the `Song_Genre_Classification.ipynb` notebook.
