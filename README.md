@@ -32,7 +32,7 @@ In Jupyter, open the `Song_Genre_Classification.ipynb` notebook.
 `Song_Genre_Classification.ipynb`: Contains the full analysis, from data loading, analysis and preprocessing to model building and evaluation.
 
 ## Saved Model
-The best-performing model is saved using joblib(song_classifier.joblib). This model can be loaded for future predictions or further analysis.
+The best-performing model is saved using joblib(`song_classifier.joblib`). This model can be loaded for future predictions or further analysis.
 
 To load the model:
 
