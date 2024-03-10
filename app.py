@@ -12,7 +12,7 @@ st.title('Song Genre Classification')
 st.write("""
 ### Prediction Model Information
 This app predicts the genre of a song as either **Hip Hop** or **Rock** based on various musical features.
-Please adjust the sliders below to set the values for these features, and then click **Classify** to see the predicted genre.
+Please adjust the sliders below to set the values for these features, and then click **Predict Song Genre** to see the predicted genre.
 """)
 
 # Creating form for user input
