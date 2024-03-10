@@ -2,7 +2,7 @@
 # Song Genre Classification
 
 ## Project Overview
-This project focuses on classifying songs based on features such as danceability, energy, acousticness, tempo, etc. into two music genres (Hip-Hop and Rock) using various machine learning techniques. The primary objective is to accurately predict the genre of a song based on its features. This repository contains the code, dataset, and documentation related to the project.
+This project focuses on classifying songs based on features such as danceability, energy, acousticness, tempo, etc. into two music genres (Hip-Hop and Rock) using various machine learning techniques. The primary objective is to accurately predict the genre of a song based on its features. This repository contains the code, dataset, and documentation and web application for the project.
 
 ## Dataset
 The analysis is based on two datasets:
@@ -19,27 +19,46 @@ The analysis is based on two datasets:
 
 
 ## Installation and Usage
-To set up the project, clone the repository, install dependencies, and navigate to the directory. Run Jupyter Notebook to view the project:
+To set up the project, follow these steps
+1. Clone the repository
 ```bash
 git clone https://github.com/Shanmukhi1920/Song_Genre_Classification
+```
+2. Navigate the project directory
+```bash
 cd Song_Genre_Classification
+```
+3. Install dependencies
+```bash
 pip install -r requirements.txt
+```
+4. Run Jupyter Notebook to view the project
+```bash
 jupyter notebook
 ```
-In Jupyter, open the `Song_Genre_Classification.ipynb` notebook.
+In Jupyter, open the `Song_Genre_Classification.ipynb` notebook to view the full analysis.
 
-## Notebook Overview
-`Song_Genre_Classification.ipynb`: Contains the full analysis, from data loading, analysis and preprocessing to model building and evaluation.
+## Web Application
+The `app.py` file in the repository launches a web application built with Streamlit that allows users to input song features and receive a genre classification in real-time.
 
-## Saved Model
-The best-performing model is saved using joblib(`song_classifier.joblib`). This model can be loaded for future predictions or further analysis.
-
-To load the model:
-
-```python
-import joblib
-model = joblib.load('song_classifier.joblib')
+## Running the Web App
+Ensure you have Streamlit installed. If not, install it using pip:
+```bash
+pip install streamlit
 ```
+Launch the app by running the following command in the terminal:
+```bash
+streamlit run app.py
+```
+
+## Saved Model and Preprocessing Files
+The best-performing model, along with the PCA transformation and scaler used for preprocessing, are saved as .pkl files. These include:
+
+`song_classifier.pkl`: The trained classification model.
+
+`scaler.pkl`: The scaler used to normalize features.
+
+`pca.pkl`: The PCA transformation applied to reduce dimensionality.
 
 ## Results
 **Performance Consistency:** Logistic Regression and SVM demonstrated consistent performance across cross-validation and test sets.
