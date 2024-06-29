@@ -6,8 +6,8 @@ This project focuses on classifying songs based on features such as danceability
 
 ## Dataset
 The analysis is based on two datasets:
-- `echonest-metrics.json`: contains track metadata with genre labels
-- `fma-rock-vs-hiphop.csv`: contains track metrics with the features
+- `data/echonest-metrics.json`: contains track metadata with genre labels
+- `data/fma-rock-vs-hiphop.csv`: contains track metrics with the features
 
 ## Methods Used
 - Dimensionality reduction using Principal Component Analysis (PCA).
@@ -36,10 +36,10 @@ pip install -r requirements.txt
 ```bash
 jupyter notebook
 ```
-In Jupyter, open the `Song_Genre_Classification.ipynb` notebook to view the full analysis.
+In Jupyter, open the `Song_Genre_Classification.ipynb` notebook in the `notebooks/` directory to view the full analysis.
 
 ## Web Application
-The `app.py` file in the repository launches a web application built with Streamlit that allows users to input song features and receive a genre classification in real-time.
+The `src/app.py` file in the repository launches a web application built with Streamlit that allows users to input song features and receive a genre classification in real-time.
 
 ## Running the Web App
 Ensure you have Streamlit installed. If not, install it using pip:
@@ -48,17 +48,17 @@ pip install streamlit
 ```
 Launch the app by running the following command in the terminal:
 ```bash
-streamlit run app.py
+streamlit run src/app.py
 ```
 
 ## Saved Model and Preprocessing Files
 The best-performing model, along with the PCA transformation and scaler used for preprocessing, are saved as .pkl files. These include:
 
-`song_classifier.pkl`: The trained classification model.
+`models/song_classifier.pkl`: The trained classification model.
 
-`scaler.pkl`: The scaler used to normalize features.
+`models/scaler.pkl`: The scaler used to normalize features.
 
-`pca.pkl`: The PCA transformation applied to reduce dimensionality.
+`models/pca.pkl`: The PCA transformation applied to reduce dimensionality.
 
 ## Results
 **Performance Consistency:** Logistic Regression and SVM demonstrated consistent performance across cross-validation and test sets.
