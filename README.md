@@ -9,14 +9,34 @@ The analysis is based on two datasets:
 - `data/echonest-metrics.json`: contains track metadata with genre labels
 - `data/fma-rock-vs-hiphop.csv`: contains track metrics with the features
 
-## Methods Used
-- Dimensionality reduction using Principal Component Analysis (PCA).
-- Machine Learning models:
-  - Logistic Regression
-  - Support Vector Machine (SVM)
-  - Decision Tree (DT)
-  - Random Forest (RF)
+## Methodology
 
+### 1. Data Collection and Preprocessing
+
+- Used a dataset compiled by The Echo Nest, containing audio features of songs classified as either 'Hip-Hop' or 'Rock'.
+- Features included acousticness, danceability, energy, instrumentalness, liveness, speechiness, tempo, and valence.
+- Merged track metadata with audio features using track IDs.
+- Handled class imbalance by undersampling the majority class ('Rock') to match the number of 'Hip-Hop' samples.
+
+### 2. Exploratory Data Analysis (EDA)
+
+- Visualized the distribution of each audio feature using histograms.
+- Created box plots to compare feature distributions between genres.
+- Computed correlation matrices using both Pearson and Spearman methods to assess feature relationships.
+
+### 3. Feature Engineering and Selection
+
+- Applied StandardScaler to normalize all features (mean=0, std=1).
+- Performed Principal Component Analysis (PCA) for dimensionality reduction.
+- Analyzed scree plot and cumulative explained variance to determine the optimal number of components.
+- Selected 6 principal components, explaining approximately 85% of the variance.
+
+### 4. Model Development and Evaluation
+
+- Implemented four classification models: Logistic Regression, Support Vector Machine (SVM), Decision Tree, and Random Forest.
+- Used 5-fold cross-validation to assess initial model performance.
+- Performed GridSearchCV for hyperparameter tuning of Decision Tree and Random Forest models.
+- Evaluated the best models on the test set using accuracy, precision, recall, and F1-score.
 
 ## Installation and Usage
 To set up the project, follow these steps
