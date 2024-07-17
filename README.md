@@ -2,7 +2,7 @@
 # Song Genre Classification
 
 ## Project Overview
-This project focuses on classifying songs based on features such as danceability, energy, acousticness, tempo, etc. into two music genres (Hip-Hop and Rock) using various machine learning techniques. The primary objective is to accurately predict the genre of a song based on its features. This repository contains the code, dataset, and documentation and web application for the project.
+This project focuses on classifying songs as either Hip-Hop or Rock based on audio features like danceability, energy, and tempo using machine learning techniques. The goal is to accurately predict a song's genre, demonstrating how AI can be applied to music analysis. This work has potential applications in the music industry, including automating playlist creation, enhancing recommendation systems, and assisting in music production. It also serves as a valuable tool for music researchers studying genre characteristics. 
 
 ## Dataset
 The analysis is based on two datasets:
